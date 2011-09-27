@@ -1,50 +1,62 @@
-html
-{font-family: 'Open Sans', sans-serif;}
+html { font-family:'Open Sans', sans-serif; }
 
-body
-{width: 100%; margin: 20px auto 10px auto; background: #005880 url('../images/background.png') repeat-x;}
+body { width:100%; margin:20px auto 10px; background:#005880 url(../images/background.png) repeat-x; }
 
-#header-logo
-{width: 620px; height: 250px; margin: 0 auto 10px auto;}
+#header-logo { width:620px; height:250px; margin:0 auto 10px; }
 
-#header-logo img
-{margin-top: 0px; border: 0px;}
+#header-logo img { margin-top:0; border:0; }
 
-#content
-{width: 620px; margin: 0 auto 0 auto;}
+#content { width:620px; margin:0 auto; }
 
-#content h2
-{font-size: 36px; line-height: 36px; color: #ffffff; text-align: center;}
-	
-#contact-form
-{width: 600px; padding: 0px; margin: 20px 0px 10px 0px; color: #000000;}
+#content h2 { font-size:36px; line-height:36px; color:#ffffff; text-align:center; }
 
-fieldset
-{border: 0px solid #ffffff;}
+#contact-form { width:600px; padding:0; margin:20px 0 10px; color:#000000; }
 
-#query
-{display:inline; width: 550px; height: auto; font-size: 18px; line-height: 22px; margin:10px 0 0 5px; padding:5px; background: #ffffff; border: 5px solid #ffffff; border-radius: 5px; -moz-border-radius: 2px; -webkit-border-radius: 5px;}
+fieldset { border:0 solid #ffffff; }
 
-#contact-form .required
-{display:inline; width: 550px; height: auto; font-size: 18px; line-height: 22px; margin:10px 0 0 5px; padding:5px; background: #ffffff; border: 5px solid #ffffff; border-radius: 5px; -moz-border-radius: 2px; -webkit-border-radius: 5px;}
+#query { display:inline; width:550px; height:auto; font-size:18px; line-height:22px; margin:10px 0 0 5px; padding:5px; background:#ffffff; border:5px solid #ffffff; border-radius:5px; -moz-border-radius:2px; -webkit-border-radius:5px; }
 
-#contact-form .select-menu
-{display:inline; width: 570px; height: auto; font-size: 18px; line-height: 22px; margin:10px 0 0 5px; padding:5px; background: #ffffff; border: 5px solid #ffffff; border-radius: 2px; -moz-border-radius: 5px; -webkit-border-radius: 5px; cursor: pointer;}
+#contact-form .required { display:inline; width:550px; height:auto; font-size:18px; line-height:22px; margin:10px 0 0 5px; padding:5px; background:#ffffff; border:5px solid #ffffff; border-radius:5px; -moz-border-radius:2px; -webkit-border-radius:5px; }
 
-#query, #contact-form .required:focus, #contact-form .select-menu:focus
-{background: #cccccc; color: #000000; border: 5px solid #ffffff;}
+#contact-form .select-menu { display:inline; width:570px; height:auto; font-size:18px; line-height:22px; margin:10px 0 0 5px; padding:5px; background:#ffffff; border:5px solid #ffffff; border-radius:2px; -moz-border-radius:5px; -webkit-border-radius:5px; cursor:pointer; }
 
-#contact-form .form-submit-button
-{width: 480px; height: auto; display: block; background-color: #002433; border: 2px solid #002433; font-size: 24px; font-weight: bold; text-align: center; color: #ffffff; margin: 10px auto 0 auto; padding: 5px 10px 5px 10px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; cursor: pointer;}
+#query,#contact-form .required:focus,#contact-form .select-menu:focus { background:#cccccc; color:#000000; border:5px solid #ffffff; }
 
-#contact-form .form-submit-button:hover
-{background-color: #cccccc; border: 2px solid #cccccc; color:#000000;}
+#contact-form .form-submit-button { width:480px; height:auto; display:block; background-color:#002433; border:2px solid #002433; font-size:24px; font-weight:bold; text-align:center; color:#ffffff; margin:10px auto 0; padding:5px 10px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; cursor:pointer; }
 
-#message
-{width:900px; margin: 60px 0 0 100px;}
+#contact-form .form-submit-button:hover { background-color:#cccccc; border:2px solid #cccccc; color:#000000; }
 
-#message h2
-{font-size:150%; color:white;}
+#message { width:900px; margin:60px 0 0 100px; }
 
-#message p
-{color:white; font-weight:bold; margin:6px 0px;}
+#message h2 { font-size:150%; color:white; }
+
+#message p { color:white; font-weight:bold; margin:6px 0; }
+
+#carousel { width:255px; height:400px; margin:0 auto; }
+
+#slides { overflow:hidden; 
+/* fix ie overflow issue */
+position:relative; width:250px; height:350px; border:1px solid #ccc; }
+
+/* remove the list styles, width : item width * total items */
+#slides ul { position:relative; left:0; top:0; list-style:none; margin:0; padding:0; width:750px; }
+
+/* width of the item, in this case I put 250x250x gif */
+#slides li { width:250px; height:auto; float:left; }
+
+#slides li img { padding:5px; }
+
+/* Styling for prev and next buttons */
+#buttons { padding:0 0 5px; float:right; }
+
+#buttons a { display:block; width:31px; height:32px; text-indent:-999em; float:left; outline:0; }
+
+a#prev { background:url(../images/arrow.gif) 0 -31px no-repeat; }
+
+a#prev:hover { background:url(../images/arrow.gif) 0 0 no-repeat; }
+
+a#next { background:url(../images/arrow.gif) -32px -31px no-repeat; }
+
+a#next:hover { background:url(../images/arrow.gif) -32px 0 no-repeat; }
+
+.clear { clear:both; }
