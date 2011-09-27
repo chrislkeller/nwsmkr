@@ -65,7 +65,8 @@
 			$.each(json.contents.Response.Data.Relationships.Relationship ,function(i, relationship){
 		
 				//adds the relationships as list items
-				relationships.append("<li>" + relationship.description1  + "</li>")
+				//links to little sis profile page...
+				relationships.append('<li>This is a <a href=\" ' + relationship.uri + '\" target=/"blank/">' + relationship.description1 +  '</a></li>')
 			});
 
 		});
