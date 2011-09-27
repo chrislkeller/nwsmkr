@@ -13,7 +13,7 @@
 <meta name="google-site-verification" content="ppHjGpSdVGKZmSCI1HdahgqU3faBzvgsOwLXZisQMo0" />
 <meta name="robots" content="index,nofollow" />
 <meta content="yes" name="apple-mobile-web-app-capable" />
-<meta name="viewport" content="initial-scale = 0.5, width=device-width, maximum-scale=0.6667, user-scalable=yes" />
+<meta name="viewport" content="initial-scale = 0.4, width=device-width, maximum-scale=0.6667, user-scalable=yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <!-- END META -->
 
@@ -25,7 +25,6 @@
 <!-- BEGIN CSS  -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:600&v2' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/coming-soon.css">
-<link rel="stylesheet" href="css/carousel.css">
 
 <!--[if IE 6]>
 <link rel="stylesheet" type="text/css" href="css/ie-6.css" />
@@ -33,21 +32,15 @@
 
 <!-- END CSS  -->
 
-<!-- BEGIN SCRIPTS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script src="scripts/query.js"></script>
+<!-- BEGIN SCRIPTS  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+
 <script src="scripts/jquery.validate.js" type="text/javascript"></script>
-<script src="scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#commentForm").validate({meta: "validate"});
 });
-
-$(document).ready(function() {
-	$('#mycarousel').jcarousel();
-});
-
 </script>
 
 </head>
@@ -64,30 +57,9 @@ $(document).ready(function() {
 <!-- BEGIN CONTENT -->
 <div id="content">
 
-<!-- DIV IN WHICH TO DISPLAY RESULTS -->
-<div id="results"></div>
+<h2>Thank you.<br>We'll be in touch shortly.</h2>
 
-<!-- BEGIN FORM -->
-<div id="contact-form">
-
-<!-- PASS SEARCH QUERY TO API -->
-<input type="text" id="query" class="required" value="Search" onclick="clickclear(this, 'Search')" onblur="clickrecall(this,'Search')" />
-
-<button type="submit" name="submit" class="form-submit-button" value="Receive Updates">Submit</button>
-
-<!--
-AFTER SEARCH RESULTS RETURNED, ALLOW USER TO SELECT OBJECT
-ON SUBMIT, PASS ID OF SELECTED OBJECT TO API SEARCH OF RELATIONSHIPS
-RETURN RELATIONSHIP RESULTS ON NEXT PAGE
- -->
-
-</div>
-<!-- END FORM -->
-
-
-
-
-<h2 class="mine" style="text-align: center">-- 30 --</h2>
+<h2 style="text-align: center">-- 30 --</h2>
 
 </div>
 <!-- END CONTENT -->
@@ -128,4 +100,4 @@ RETURN RELATIONSHIP RESULTS ON NEXT PAGE
 <!-- END BODY -->
 
 </html>
-<!-- END DOC -->
+<!-- END DOCUMENT -->
