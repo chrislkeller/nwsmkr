@@ -50,34 +50,42 @@
         query=$("#query").val();
 
         $('.relationships_link').live('click', function() {
-          $.getJSON("proxy.php?url=http://api.littlesis.org/entity/" + $(this).attr('href') + "/relationships.json?_key=6f1b1376ec9f3f00824c8523bd32ce9a3bfbe408", function(json){
+
+          var list_item = $(this).parent()
+
+          var relationships = list_item.append("<ul></ul>")
+
+          var relation_url = "proxy.php?url=http://api.littlesis.org/entity/" + $(this).attr('href') + "/relationships.json?_key=6f1b1376ec9f3f00824c8523bd32ce9a3bfbe408";
+
+          $.getJSON(relation_url, function(json){
 
             //this is where we can loop through the results in the json object
             $.each(json.contents.Response.Data.Relationships.Relationship ,function(i, relationship){
-              console.log(relationship.description1)
+              relationships.append("<li>" + relationship.description1  + "</li>")
             });
 
           });
+
           return false
+
         });
 
         //get the json file
         $.getJSON("proxy.php?url=" + url+query, function(json){
 
+          $("#results").html("<ul></ul>")
+
           //this is where we can loop through the results in the json object
-          $.each(json.contents.Response.Data.Entities.Entity,function(i,entity){
+          $.each(json.contents.Response.Data.Entities.Entity, function(i, entity) {
+
+            if (entity.primary_type != "Person") return
 
             //this is where we do what we want with the tweet
-            $("#results").append(
-            '<table>' +
-            '<tr>' +
-            // '<td><input type="checkbox" id="selected" name="selected" /></td>' +
-            '<td><a class="relationships_link" href="'+entity.id+'">(ID: ' + entity.id + ') <strong>' + entity.name + '</strong>:</a></td>' +
-            '<td>' + entity.description + '</td>' +
-            '</tr>' +
-            '</table>');
-          });
+            $("#results ul").append(
+              '<li><a class="relationships_link" href="'+entity.id+'">(ID: ' + entity.id + ') <strong>' + entity.name + '</strong>:</a>' + entity.description + '</li>');
               });
+            });
+
           });
        });
 </script>
