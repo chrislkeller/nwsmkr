@@ -66,15 +66,3 @@ a#next:hover { background:url(../images/arrow.gif) -32px 0 no-repeat; }
 div#submit_news:hover { background-position:-41px 0px; }
 
 #submit_news a{ display:block; height:170px; width:40px; }
-
-a {color:#333; text-decoration:none}
-
-a:hover {color:#ccc; text-decoration:none}
-
-#mask { position:absolute; left:0; top:0; z-index:9000; background-color:#cccccc; display:none; }
-
-#boxes .window { position:absolute; left:0; top:0; width:440px; height:200px; display:none; z-index:9999; padding:20px; }
-
-#boxes #dialog { width:375px; height:150px; padding:10px; background-color:#000000; color: #ffffff; }
-
-#boxes #dialog a {color: #ffffff; text-decoration: underline; }

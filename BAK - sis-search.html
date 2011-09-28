@@ -23,10 +23,8 @@
 <!-- END FAVICON/MOBILE TOUCH ICON -->
 
 <!-- BEGIN CSS  -->
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600&v2'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600&v2' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/coming-soon.css">
-<link type="text/css" href="css/base.css" rel="stylesheet" />
-<link type="text/css" href="css/RGraph.css" rel="stylesheet" />
 
 <!--[if IE 6]>
 <link rel="stylesheet" type="text/css" href="css/ie-6.css" />
@@ -35,18 +33,10 @@
 <!-- END CSS  -->
 
 <!-- BEGIN SCRIPTS -->
-<!--[if IE]><script language="javascript" type="text/javascript" src="../../Extras/excanvas.js"></script><![endif]-->
-
-<!-- JIT Library File -->
-<script language="javascript" type="text/javascript" src="scripts/jit.js"></script>
-
-<!-- Example File -->
-<script language="javascript" type="text/javascript" src="scripts/example.js"></script>
-
-<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" src="scripts/new-query.js"></script>
-<script language="javascript" type="text/javascript" src="scripts/jquery.validate.js" type="text/javascript"></script>
-<script language="javascript" type="text/javascript" src="scripts/carousel.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="scripts/query.js"></script>
+<script src="scripts/jquery.validate.js" type="text/javascript"></script>
+<script src="scripts/jquery.jcarousel.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -59,57 +49,54 @@ $(document).ready(function() {
 <!-- END DOC HEADER -->
 
 <!-- BEGIN BODY -->
-<body onload="init();">
-
-<div id="submit_news"><a href="#" onclick="show_prompt()"></a></div>
+<body>
 
 <!-- BEGIN HEADER LOGO -->
-<!-- <div id="header-logo">
+<div id="header-logo">
 <a href="http://www.nwsmkr.com/"><img src="images/logo.gif"></a>
-</div> -->
-
-<!-- BEGIN VIZ HTML -->
-<div id="container">
-
-<!-- BEGIN VIZ HTML -->
-<div id="center-container">
-<div id="infovis"></div>
 </div>
-
-<div id="right-container">
-<div id="inner-details"></div>
-<div id="log"></div>
-</div>
-
-</div>
-<!-- END VIZ HTML -->
-
-
 
 <!-- BEGIN CONTENT -->
 <div id="content">
 
+<!-- DIV IN WHICH TO DISPLAY RESULTS -->
+<div id="results"></div>
+
 <!-- BEGIN FORM -->
 <div id="contact-form">
-<button type="submit" id="search-again" name="submit" class="form-submit-button" value="Receive Updates">New Search</button>
+
+<!-- PASS SEARCH QUERY TO API -->
+<input type="text" id="query" class="required" value="Search" onclick="clickclear(this, 'Search')" onblur="clickrecall(this,'Search')" />
+
+<button type="submit" name="submit" class="form-submit-button" value="Receive Updates">Submit</button>
+
+<!--
+AFTER SEARCH RESULTS RETURNED, ALLOW USER TO SELECT OBJECT
+ON SUBMIT, PASS ID OF SELECTED OBJECT TO API SEARCH OF RELATIONSHIPS
+RETURN RELATIONSHIP RESULTS ON NEXT PAGE
+ -->
+
 </div>
 <!-- END FORM -->
+
+<h2 style="text-align: center">-- 30 --</h2>
 
 </div>
 <!-- END CONTENT -->
 
-
 <!-- BEGIN SCRIPTS -->
 <script type="text/javascript">
-
-	$('#search-again').click(function(){
-		document.location.href='sis-slide.html';
-	})
-
-	function show_prompt() {
-		var name=prompt("Here is your embed code:","<iframe src=\"http://localhost:8888/4github-repos/nwsmkr/sis-visualize.html\" width=\"100%\" height=\"300\"></iframe>");
+	function clickclear(thisfield, defaulttext) {
+		if (thisfield.value == defaulttext) {
+			thisfield.value = "";
+		}
 	}
 
+	function clickrecall(thisfield, defaulttext) {
+		if (thisfield.value == "") {
+			thisfield.value = defaulttext;
+		}
+	}
 </script>
 <!-- END SCRIPTS -->
 
