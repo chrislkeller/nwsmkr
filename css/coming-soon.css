@@ -73,8 +73,8 @@ a:hover {color:#ccc; text-decoration:none}
 
 #mask { position:absolute; left:0; top:0; z-index:9000; background-color:#cccccc; display:none; }
 
-#boxes .window { position:absolute; left:0; top:0; width:440px; height:200px; display:none; z-index:9999; padding:20px; }
+#boxes .window { position:absolute; left:0; top:0; width:440px; height:250px; display:none; z-index:9999; padding:20px; }
 
-#boxes #dialog { width:375px; height:150px; padding:10px; background-color:#000000; color: #ffffff; }
+#boxes #dialog { width:375px; height:250px; padding:10px; background-color:#000000; color: #ffffff; }
 
 #boxes #dialog a {color: #ffffff; text-decoration: underline; }
