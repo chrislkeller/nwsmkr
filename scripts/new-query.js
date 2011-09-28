@@ -1,45 +1,52 @@
+$(document).ready(function(){
 
-	$(document).ready(function(){
+	//keep carousel div hidden
+	$('#results').hide();
 
+	//api url variable
 	var url='http://api.littlesis.org/entities.json?_key=6f1b1376ec9f3f00824c8523bd32ce9a3bfbe408%26q=';
+
+	//api query variable
 	var query;
 
+		//function to activate a lot of things...
 		$('button').click(function(){
 
-		//get value in the search box and store it in the variable
-		query=$("#query").val();
-		
+			//hide contact form
+			$('#header-logo').hide();			
 
+			//hide contact form
+			$('#contact-form').hide();
 		
-		//get the json file
-        $.getJSON("proxy.php?url=" + url+query, function(json){
+			//show results div
+			$('#results').toggle(400); // First click should toggle to 'show'
+
+			//get value in the search box and store it in the variable
+			query=$("#query").val();
 			
-			//$("#results").html("<ul></ul>")
+				//get the json file
+				$.getJSON("proxy.php?url=" + url+query, function(json){
+				
+					//this is where we can loop through the results in the json object
+					$.each(json.contents.Response.Data.Entities.Entity, function(i, entity) {
 
-				//this is where we can loop through the results in the json object
-				$.each(json.contents.Response.Data.Entities.Entity, function(i, entity) {
+						//return only the people
+						if (entity.primary_type != "Person") return
 
-					if (entity.primary_type != "Person") return
-
-				//this is where we do what we want with the tweet
-				/*$("#results ul").append(
-				'<li><a class="relationships_link" href="'+entity.id+'">(ID: ' + entity.id + ') <strong> ' + entity.name + 
-				'</strong>:</a>' + entity.description + '</li>' +
-				'<p>' + entity.summary + '</p>');*/
-
-					$("#slides ul").append( 
-					'<li>' +
-					'<a class="relationships_link" href="' + entity.id +'">(ID: ' + entity.id + ' ) <strong> ' +
-					'<br>' + entity.name + '</strong>:</a><br>' + entity.description +
-					//'<img src=\"images/anon.png\" width=\"252px\" />' +
-					//'<br>' + 
-					'</li>');
-              });
+							//write the query return
+							$("#slides ul").append( 
+								'<li>' +
+								//'<a class="relationships_link" href="' + entity.id +'">(ID: ' + entity.id + ' ) <strong> ' +
+								'<a class="relationships_link" href="' + entity.id +'"><br><h3>' +
+								entity.name + '</h3></a>' + entity.description +
+								'<img src=\"images/anon.png\" width=\"252px\" />' +
+								//'<br>' +
+								'</li>');
+              	});
             });
             
-            
-            
-            		//creates link for given relationships
+
+		//creates link for given relationships
 		$('.relationships_link').live('click', function() {
 
 		//creates unordered list beneath parent		
@@ -57,13 +64,21 @@
 		
 				//adds the relationships as list items
 				//links to little sis profile page...
-				relationships.append('<li>This is a <a href=\" ' + relationship.uri + '\" target=/"blank/">' + relationship.description1 +  '</a></li>')
+				relationships.append(
+				//'<li>This is a <a href=\" ' + relationship.uri + 
+				//'\" target=/"blank/">' + relationship.description1 +
+				//'</a></li>'
+				)
 			});
 
-			//add visualize button
+			//show contact form again
+			$('#contact-form').fadeIn(100); // First click should toggle to 'show'
+
+			//write visualization button
 			document.getElementById('contact-form').innerHTML = 
 			'<button type="submit" id="submit" name="submit" class="form-submit-button">Visualize</button>';
 
+			//activate visualization button
 			$('#submit').click(function(){
 				document.location.href='sis-visualize.html';
 			})
@@ -72,16 +87,6 @@
 
           return false
 
-
-
+			});
 		});
-		
-		
-
-		
-		
-            
-            
-
-          });
-       });
+	});

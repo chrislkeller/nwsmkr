@@ -59,6 +59,16 @@ $(document).ready(function() {
 
 <h2>Thank you.<br>We'll be in touch shortly.</h2>
 
+<p style="font-size: 16px; color: #ffffff; text-align: center;">Meanwhile, feel free to search some example connections</p>
+
+<!-- BEGIN FORM -->
+<div id="contact-form">
+
+<input type="submit" id="connections"name="submit" class="form-submit-button" value="Search Connections" />
+
+</div>
+<!-- END FORM -->
+
 <h2 style="text-align: center">-- 30 --</h2>
 
 </div>
@@ -66,17 +76,10 @@ $(document).ready(function() {
 
 <!-- BEGIN SCRIPTS -->
 <script type="text/javascript">
-	function clickclear(thisfield, defaulttext) {
-		if (thisfield.value == defaulttext) {
-			thisfield.value = "";
-		}
-	}
 
-	function clickrecall(thisfield, defaulttext) {
-		if (thisfield.value == "") {
-			thisfield.value = defaulttext;
-		}
-	}
+$('#connections').click(function(){
+document.location.href='sis-slide.html';
+			})
 </script>
 <!-- END SCRIPTS -->
 

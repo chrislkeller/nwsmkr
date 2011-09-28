@@ -36,7 +36,7 @@ fieldset { border:0 solid #ffffff; }
 
 #slides { overflow:hidden; 
 /* fix ie overflow issue */
-position:relative; width:250px; height:350px; border:1px solid #ccc; }
+position:relative; width:250px; height:350px; border: none;}
 
 /* remove the list styles, width : item width * total items */
 #slides ul { position:relative; left:0; top:0; list-style:none; margin:0; padding:0; width:750px; }
@@ -60,3 +60,9 @@ a#next { background:url(../images/arrow.gif) -32px -31px no-repeat; }
 a#next:hover { background:url(../images/arrow.gif) -32px 0 no-repeat; }
 
 .clear { clear:both; }
+
+#submit_news { background:transparent url(../images/submit-news.png) no-repeat scroll 0px 0px; height:170px; left:0; position:fixed; top:180px; width:40px; }
+
+div#submit_news:hover { background-position:-41px 0px; }
+
+#submit_news a{ display:block; height:170px; width:40px; }
