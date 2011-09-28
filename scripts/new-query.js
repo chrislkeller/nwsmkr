@@ -40,6 +40,7 @@ $(document).ready(function(){
 								'<a class="relationships_link" href="' + entity.id +'"><br><h3>' +
 								entity.name + '</h3></a>' + entity.description +
 								'<img src=\"images/anon.png\" width=\"252px\" />' +
+								//'<br>' +
 								'</li>');
               	});
             });
