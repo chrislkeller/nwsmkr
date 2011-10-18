@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 			//activate visualization button
 			$('#submit').click(function(){
-				document.location.href='sis-visualize.html';
+				document.location.href='nwsmkr-visualize.html';
 			})
 
 		});
