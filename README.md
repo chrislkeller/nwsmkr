@@ -6,8 +6,6 @@
 
 Final Knight-Mozilla News Lab presentation is <a href="http://www.chrislkeller.com/pages/nwsmkr" target="blank">here</a>.
 
-*****
-
 ##The "Scope"
 
 In an age when consumers of digital news are clamoring for more information in more places, and beat reporters and journalists face constant deadlines, there needs to be an entry-level solution to quickly visualize facts and data.
@@ -30,8 +28,6 @@ nwsmkr will focus on being an open-source option for visualizing connections and
 From the start, I see two specific use cases for nwsmkr in the newsroom.&nbsp;Again, because nwsmkr can evolve depending on needs, those use cases can grow.
 
 <img src="http://posterous.com/getfile/files.posterous.com/temp-2011-08-07/pIieCHpbfzsqJwpctHzerecAkACbvaCpAEjefxjdFuwFzojBgiGqvArpeomt/Untitled.png" alt="nwsmkr use cases" width="520" />
-
-*****
 
 ##The Roadmap
 
@@ -105,8 +101,6 @@ Coming soon...
 
 ###Source code:
 GitHub Repo is <a href="https://github.com/chrislkeller/nwsmkr" target="blank"></a>here.
-
-*****
 
 ##The Payoff?
 Across the world newsrooms have been asked to "do more with less."
