@@ -1,6 +1,16 @@
 ##What is nwsmkr
 
-**nwsmkr** is an interface to an open-source javascript visualization library. It will generate embed codes for visualizations that show the connections between public figures. It will lower the bar for journalists interested in digital storytelling. It will offer an entry-point for journalists who want to learn to code.
+**nwsmkr** is an idea that developed from my participation in the Knight-Mozilla News Technology Partnership learning lab and hackfest. 
+
+I really see two "threads" at play here with nwsmkr.
+
+**"Help a journo out"**
+
+Let's build an interface to an open-source javascript visualization library to generate embed codes for visualizations that show the connections between public figures. This will lower the bar for journalists interested in digital storytelling, and offer an entry-point for journalists who want to learn to code.
+
+**"Visualize existing data"**
+
+I've been talking with the Matthew and Kevin at [littlesis.org](http://littlesis.org/) which have been gathering information about people and companies for the past five years or so. They have a good thing going, and would be interested in a visualization layer to their data.
 
 ###More info:
 
