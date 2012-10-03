@@ -14,7 +14,7 @@ I've been talking with the Matthew and Kevin at [littlesis.org](http://littlesis
 
 ###More info:
 
-Final Knight-Mozilla News Lab presentation is <a href="http://www.chrislkeller.com/pages/nwsmkr" target="blank">here</a>.
+Final Knight-Mozilla News Lab presentation is <a href="http://www.chrislkeller.com/nwsmkr" target="blank">here</a>.
 
 ##The "Scope"
 
