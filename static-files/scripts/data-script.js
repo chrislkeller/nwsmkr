@@ -3,7 +3,7 @@
 
     // begin main function
     jqueryNoConflict(document).ready(function(){
-        retriveData();
+
     });
 
     // clear form fields on focus

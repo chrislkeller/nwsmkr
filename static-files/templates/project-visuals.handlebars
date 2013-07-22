@@ -3,10 +3,8 @@
         <div id="contact-form">
             <div class="ss-form">
                 <fieldset>
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thank-you.html';}"></iframe>
-
-                    <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thank-you.html';}"></iframe> -->
-
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {
+                        renderHandlebarsTemplate('static-files/templates/project-thank-you.handlebars', '#project-visuals');}"></iframe>
                     <form action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dHlhUjVPYl9oUkZnMHI5UEc1d2wtc0E6MQ&amp;ifq" method="POST"
                     target="hidden_iframe" id="commentForm" onsubmit="submitted=true;">
                         <br>
