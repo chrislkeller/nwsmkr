@@ -1,6 +1,6 @@
 ##What is nwsmkr
 
-**nwsmkr** is an idea that developed from my participation in the Knight-Mozilla News Technology Partnership learning lab and hackfest. 
+**nwsmkr** is an idea that developed from my participation in the Knight-Mozilla News Technology Partnership learning lab and hackfest.
 
 I really see two "threads" at play here with nwsmkr.
 
@@ -28,16 +28,16 @@ That solution needs to:
 
 I think an interface to an <a href="http://thejit.org/" target="_blank">open-source javascript visulalization library</a> provides that multi-prong solution.
 
-<img src="http://posterous.com/getfile/files.posterous.com/temp-2011-08-07/JaGvqaIqdbAaFqzolHHaDwhcloBtHpGdeBxEFpviilnHGalineGIkvbgktAx/interface-slide.png" alt="nwsmkr interface" width="520" />
+<img src="http://blog.chrislkeller.com/pages/nwsmkr/interface-slide.png" alt="nwsmkr interface" width="520" />
 
 After a journalist enters information to visualize, the interface generates an embed code for a news organization's website or a journalist's blog. The interface can also generate a scaleable vector graphic for display in print products. And because the visualization is based on open-web standards -- HTML5, CSS3 and javascript -- it can be seen on mobile devices and tablets.
 
-<img src="http://posterous.com/getfile/files.posterous.com/temp-2011-08-07/ztirBFGlwseBFercszlocCeralFbwAykqowadadyecukzypmxxEnzwFuzuFx/workflow.png" alt="nwsmkr workflow" width="520" />
+<img src="http://blog.chrislkeller.com/pages/nwsmkr/workflow.png" alt="nwsmkr workflow" width="520" />
 
 nwsmkr will focus on being an open-source option for visualizing connections and distinctions between public figures. It's open-source and a snap to&nbsp;integrate into existing operations and workflow.
 From the start, I see two specific use cases for nwsmkr in the newsroom.&nbsp;Again, because nwsmkr can evolve depending on needs, those use cases can grow.
 
-<img src="http://posterous.com/getfile/files.posterous.com/temp-2011-08-07/pIieCHpbfzsqJwpctHzerecAkACbvaCpAEjefxjdFuwFzojBgiGqvArpeomt/Untitled.png" alt="nwsmkr use cases" width="520" />
+<img src="http://blog.chrislkeller.com/pages/nwsmkr/use-cases.png" alt="nwsmkr use cases" width="520" />
 
 ##The Roadmap
 
@@ -164,7 +164,7 @@ If you want more information, let me know. I'm going to pass it along to our web
 
 **RE**: nwsmkr
 
-Hey - I ran through that site you sent over and we can go either route: use that interface or bring it to our server. 
+Hey - I ran through that site you sent over and we can go either route: use that interface or bring it to our server.
 
 I'm in favor of the latter because we might be able to&nbsp;combine it with some of the homebrew apps we created -- like the wiki? -- and also streamline how we get the graphics onto the website.
 
